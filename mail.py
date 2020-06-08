@@ -8,8 +8,8 @@ from email import encoders
 
 ### Function to send the email ###
 def send_an_email():
-	toaddr = 'coeaikkm@cet.edu.in'    
-	me = 'priyankapattanaik2013@gmail.com'
+	toaddr = 'email of the receiver'    
+	me = 'email of the sender'
 	subject="File sending" 
 	msg = MIMEMultipart()
 	msg['Subject'] = subject
@@ -29,7 +29,7 @@ def send_an_email():
 		s.ehlo()
 		s.starttls()	
 		s.ehlo()
-		s.login(user = 'priyankapattanaik2013@gmail.com', password = 'password')
+		s.login(user = 'sender mail', password = 'password')
 		#s.send_message(msg)
 		s.sendmail(me, toaddr, msg.as_string())
 		s.quit()
